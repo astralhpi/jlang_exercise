@@ -1,0 +1,4 @@
+#!/usr/bin/env coconut
+
+import sys
+sys.argv[1:] |> map$(int) |> list |> x -> sum(x) / len(x) |> print
