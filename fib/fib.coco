@@ -1,0 +1,14 @@
+#!/usr/bin/env coconut
+
+import sys
+
+def fib(1) = 1
+
+@addpattern(fib)
+def fib(2) = 1
+
+@addpattern(fib)
+def fib(n is int if n > 2) = fib(n-1) + fib(n-2)
+
+sys.argv[1] |> int |> fib |> print
+

@@ -1,0 +1,11 @@
+#!/usr/bin/env coconut
+
+import sys
+
+def fact(1) = 1
+
+@addpattern(fact)
+def fact(n is int if n > 1) = fact(n-1) * n
+
+sys.argv[1] |> int |> fact |> print
+

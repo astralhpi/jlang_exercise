@@ -19,7 +19,7 @@ def gen_output(dirname):
             srcpath = os.path.join(dirname, dirname) + ".coco"
             args = line.split(' ')
             proc = subprocess.Popen(
-                    ['coconut', '-q', '-r', srcpath, "--argv"] + args,
+                    ['coconut-run', srcpath] + args,
                     stdout=subprocess.PIPE)
             of.write(proc.stdout.read().decode('utf-8'))
 
